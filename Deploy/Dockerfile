@@ -5,8 +5,8 @@ FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copiar os arquivos do projeto
-COPY Spring-Security---test-forms/pom.xml /app/
-COPY Spring-Security---test-forms/src/ /app/src/
+COPY Deploy/pom.xml /app/
+COPY Deploy/src/ /app/src/
 
 
 
