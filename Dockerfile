@@ -1,6 +1,10 @@
 # Etapa de construção
 #FROM maven:3.9.4-openjdk-21 AS build 
-FROM ubuntu:latest AS build
+#FROM ubuntu:latest AS build
+FROM openjdk:21-jdk-slim AS build
+
+# Instale o barato do Maven
+RUN apt-get update && apt-get install -y maven && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Definir o diretório dentro do container para a aplicação
 WORKDIR /app
