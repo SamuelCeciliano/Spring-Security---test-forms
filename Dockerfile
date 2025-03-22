@@ -1,5 +1,5 @@
 # Etapa de construção
-FROM maven:3.4.3-openjdk AS build 
+FROM maven:latest-openjdk-21 AS build 
 #FROM ubuntu:latest AS build
 
 # Definir o diretório dentro do container para a aplicação
